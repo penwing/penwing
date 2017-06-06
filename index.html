@@ -13,7 +13,21 @@
         <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
         <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
         <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
-
+        <style>
+            .jSticky-large{
+                background:transparent url(./Love_files/stickynote-large.png) no-repeat top left;
+                width:225px;
+                height:228px;
+                position: absolute;
+                z-index:999999;
+            }
+            .jStickyNote{
+                padding:30px
+            }
+            .jStickyNote p{
+                text-align: center
+            }
+        </style>
     </head>
     <body>
         <div id="main">
@@ -54,6 +68,21 @@
         
             <source src="http://oq8q06ybp.bkt.clouddn.com/%E6%9E%97%E5%AE%A5%E5%98%89%20-%20%E5%85%9C%E5%9C%88.mp3" type="audio/mp3">
             </source></audio>
+            <div class="jSticky-large ui-draggable" style="position: absolute; top: 0px; right: 0px;display:none">
+                <div class="jStickyNote" style="cursor: move;">
+                    <p style="color:#000000">我爱你<br>如鲸向海 鸟投林<br>无可避免<br>退无可退</p>
+                </div>
+            </div>
+            <div class="jSticky-large ui-draggable" style="position: absolute; top: 220px; right: 0px;display:none">
+                <div class="jStickyNote" style="cursor: move;">
+                    <p style="color:#000000">世界就像巨大的夹娃娃机<br>我隔着玻璃<br>只想得到你</p>
+                </div>
+            </div>
+            <div class="jSticky-large ui-draggable" style="position: absolute; top: 440px; right: 0px;display:none">
+                <div class="jStickyNote" style="cursor: move;">
+                    <p style="color:#000000">螃蟹在剥我的壳<br>日记本在写我<br>满天的枫叶落在雪花上<br>而你在想我</p>
+                </div>
+            </div>
         </div>
     
     <script>
@@ -127,6 +156,15 @@
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
             if (seed.hover(x, y)) {
+                setTimeout(function(){
+                    $('.jSticky-large:eq(0)').fadeIn(2000)
+                },20000)
+                setTimeout(function(){
+                    $('.jSticky-large:eq(1)').fadeIn(2000)
+                },21000)
+                setTimeout(function(){
+                    $('.jSticky-large:eq(2)').fadeIn(2000)
+                },22000)
                 hold = 0; 
                 canvas.unbind("click");
                 canvas.unbind("mousemove");
