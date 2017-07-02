@@ -261,6 +261,16 @@
         }));
 
         runAsync().start();
+
+    /*监听键盘*/
+    var loveStr=''
+    $(document).keydown(function(e){
+        var val = e.keyCode||e.which||e.charCode
+        loveStr += val
+        if(loveStr.indexOf('798566657376798669897985') != -1){
+            $('#text').html('<p style="font-size:30px;">我也爱你呀 小茶杯 mua~</p>')
+        }
+    })
     })();
     </script>
 
