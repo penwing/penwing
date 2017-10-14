@@ -276,6 +276,11 @@
     $('#clock-box').click(function(){
         window.open('./PhotobarGallery/index.html')
     })
+    
+		var hour = new Date().getHours()
+        if(hour>=23 || hour<=7) {
+            alert('晚安小宝贝,mua~')
+        }
     </script>
 
 
